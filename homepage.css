@@ -1,3 +1,6 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 .container{
    margin: 0;
    padding: 0;
@@ -33,6 +36,7 @@
     margin-left: 15px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -41,9 +45,38 @@
 .homepage-album-covers{
     height: 160px;
     width: 150px;
-    background-color: blueviolet;
     position: absolute;
     top: 39%;
     left: 50%;
+    border-radius: 10px;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.homepage-album-covers img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+.text-bg{
+    margin-top: 150px;
+    width: 100%;
+    height: 40%;
+}
+.text-bg h1{
+    font-size: 18px;
+    margin-left: 24px;
+    margin-top: 32px;
+    height: 12px;
+}
+.text-bg a{
+    font-size: 14px;
+    margin-left: 24px;
+    color: grey;
+    text-decoration: none;
 }
