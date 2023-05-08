@@ -1,0 +1,49 @@
+.container{
+   margin: 0;
+   padding: 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: aqua;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.homepage{
+    background-color: white;
+    height: 65vh;
+    width: 120vh;
+    border-radius: 20px;
+}
+
+.homepage-covers-list{
+    display: flex;
+    background-color: blueviolet;
+    height: 280px;
+    border-radius: 20px 20px 0px 0px;
+    align-items: center;
+}
+
+.homepage-covers{
+    height: 250px;
+    width: 188px;
+    margin-left: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+}
+.homepage-album-covers{
+    height: 160px;
+    width: 150px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
