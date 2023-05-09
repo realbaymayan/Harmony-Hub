@@ -17,15 +17,14 @@ body{
 
 .homepage{
     background-color: white;
-    height: 65vh;
-    width: 120vh;
+    height: 85vh;
+    width: 165vh;
     border-radius: 20px;
 }
-
 .homepage-covers-list{
     display: flex;
     background-color: blueviolet;
-    height: 280px;
+    height: 360px;
     border-radius: 20px 20px 0px 0px;
     align-items: center;
 }
