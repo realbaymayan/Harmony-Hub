@@ -1,91 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harmony Hub</title>
-    <script src="https://kit.fontawesome.com/f8d7233e05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="homepage.css">
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/f8d7233e05.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            Header 
+      <div class="header">Header</div>
+      <div class="home">
+        <div class="aside-bar">
+          <div class="top-menu">
+            <button><i class="fa-solid fa-house"></i> Home</button>
+            <button>Albums</button>
+            <button>Artists</button>
+            <button>Liked Songs</button>
+          </div>
+          <div class="bottom-menu">
+            <button>Çalma Listesi 1</button>
+            <button>Çalma Listesi 2</button>
+            <button>Çalma Listesi 3</button>
+          </div>
         </div>
-        <div class="home">
-            <div class="aside-bar">
-                <button><i class="fa-solid fa-house"></i> Home</button>
-                <button>Albums</button>
-                <button>Artists</button>
-                <button>Liked Songs</button>
-                <button>Çalma Listesi 1</button>
-                <button>Çalma Listesi 2</button>
-                <button>Çalma Listesi 3</button>
+        <div class="homepage">
+          <div class="homepage-covers-list">
+            <div class="last-played">
+              <h1>Recently played</h1>
             </div>
-            <div class="homepage">
-                <div class="homepage-covers-list">
-                    <div class="homepage-covers">
-                        <div class="homepage-album-covers">
-                            <img src="album_covers/atlantis-cover.jpg" alt="">
-                        </div>
-                        <div class="text-bg">
-                            <h1>Atlantis</h1>
-                            <a href="">Güneş</a>
-                        </div>
-                    </div>
-                    <div class="homepage-covers">
-                        <div class="homepage-album-covers">
-                            <img src="album_covers/millenium-cover.jpg" alt="">
-                        </div>
-                        <div class="text-bg">
-                            <h1>Millenium</h1>
-                            <a href="">Backstreet Boys</a>
-                        </div>
-                    </div>
-                    <div class="homepage-covers">
-                        <div class="homepage-album-covers">
-                            <img src="album_covers/all-risec-cover.jpg" alt="">
-                        </div>
-                        <div class="text-bg">
-                            <h1>All Rise</h1>
-                            <a href="">Blue</a>
-                        </div>
-                    </div>
-                    <div class="homepage-covers">
-                        <div class="homepage-album-covers">
-                            <img src="album_covers/akustik-travma-cover.jpg" alt="">
-                        </div>
-                        <div class="text-bg">
-                            <h1>Akustik Travma</h1>
-                            <a href="">Yüzyüzeyken  Konuşuruz</a>
-                        </div>
-                    </div>
-                    <div class="homepage-covers">
-                        <div class="homepage-album-covers">
-                            <img src="album_covers/positions-cover.jpg" alt="">
-                        </div>
-                        <div class="text-bg">
-                            <h1>Positions</h1>
-                            <a href="">Ariana Grande</a>
-                        </div>
-                    </div>
+            <div class="cover-container">
+              <div class="homepage-covers">
+                <div class="homepage-album-covers">
+                  <img src="album_covers/atlantis-cover.jpg" alt="" />
                 </div>
+                <div class="text-bg">
+                  <h1>Atlantis</h1>
+                  <a href="">Güneş</a>
+                </div>
+              </div>
+              <div class="homepage-covers">
+                <div class="homepage-album-covers">
+                  <img src="album_covers/millenium-cover.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1>Millenium</h1>
+                  <a href="">Backstreet Boys</a>
+                </div>
+              </div>
+              <div class="homepage-covers">
+                <div class="homepage-album-covers">
+                  <img src="album_covers/all-risec-cover.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1>All Rise</h1>
+                  <a href="">Blue</a>
+                </div>
+              </div>
+              <div class="homepage-covers">
+                <div class="homepage-album-covers">
+                  <img src="album_covers/akustik-travma-cover.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1>Akustik Travma</h1>
+                  <a href="">Yüzyüzeyken Konuşuruz</a>
+                </div>
+              </div>
+              <div class="homepage-covers">
+                <div class="homepage-album-covers">
+                  <img src="album_covers/positions-cover.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1>Positions</h1>
+                  <a href="">Ariana Grande</a>
+                </div>
+              </div>
             </div>
-
+          </div>
         </div>
-        <div class="footer">
-            Footer 
-        </div>
+      </div>
+      <div class="footer">Footer</div>
     </div>
     <script>
-        const buttons = document.querySelectorAll('.aside-bar button');
-        buttons.forEach(button => {
-        button.addEventListener('click', function() {
-        buttons.forEach(btn => btn.classList.remove('active')); // Diğer butonlardan active sınıfını kaldır
-        this.classList.add('active'); // Basılan butona active sınıfını ekle
+      const buttons = document.querySelectorAll(".aside-bar button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          buttons.forEach((btn) => btn.classList.remove("active")); // Diğer butonlardan active sınıfını kaldır
+          this.classList.add("active"); // Basılan butona active sınıfını ekle
         });
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
