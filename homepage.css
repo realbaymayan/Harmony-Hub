@@ -15,10 +15,27 @@ body{
    align-items: center;
 }
 
+.aside-bar{
+    flex-grow: 1;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; butonları aşağıdan ve yukarıdan ortaya alır   */
+}
+
+.aside-bar button{
+    height: 35px;
+    width: 160px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
 .homepage{
     background-color: white;
     height: 85vh;
-    width: 165vh;
+    width: 186vh;
     border-radius: 20px;
 }
 .homepage-covers-list{
