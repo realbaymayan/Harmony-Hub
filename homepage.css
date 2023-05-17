@@ -41,7 +41,9 @@ body{
     
 }
 
-.aside-bar{
+.left-bar {
+    position: fixed;
+    height: 100%;
     background-color: gray;
     display: flex;
     flex-direction: column;
@@ -50,35 +52,36 @@ body{
     box-sizing: border-box;
 }
 
+.right-bar{
+    position: fixed;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.right-bar h2{
+   color: white;
+   font-size: 16px;
+   margin: 15px 5px 5px 15px;
+}
+
 .top-menu, .bottom-menu{
+    
     display: flex;
     flex-direction: column;
 }
 
-.aside-bar button:hover,
-.aside-bar button.active {
-    background-color:  red;
-    position: relative;
-    z-index: 1;
- }
-
-
-.aside-bar button{
-    height: 35px;
-    width: 120px;
-    border: 0px;
-    border-radius: 10px;
-    margin: 15px;
-    background-color: rgb(55, 25, 138);
-    color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
 .homepage{
     background-color: #444;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 60px 0;
+    margin: 0px 150px;
     box-sizing: border-box;
 }
 
@@ -97,7 +100,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+   
 }
 
 .homepage-covers{
@@ -133,6 +136,18 @@ body{
     height: 64px;
     padding: 10px 0;
 }
+.text-bg button{
+   margin-left: 75px;
+   margin-top: -78px;
+   height: 35px;
+   width: 35px;
+   border-radius: 100px;
+   border: 0px;
+   position: absolute;
+   cursor: pointer;
+   
+}
+
 .text-bg h1{
     font-size: 16px;
     color: #bbb;
@@ -155,7 +170,8 @@ body{
 }
 
 .banner-container{
-    width: 850px;
+    width: 60%;
+    max-width: 850px;
     height: 350px;
     background-image: url("artist-page-bg/taylor-swift-bg.jpg");
     background-size: cover;
@@ -166,6 +182,7 @@ body{
     display: flex;
     align-items: flex-end;
 }
+
 .banner-title{
     display: flex;
     flex-grow: 1;

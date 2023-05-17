@@ -15,7 +15,7 @@
     <div class="container">
       <div class="header">Header</div>
       <div class="home">
-        <div class="aside-bar">
+        <div class="left-bar">
           <div class="top-menu">
             <button><i class="fa-solid fa-house"></i> Home</button>
             <button>Albums</button>
@@ -37,7 +37,7 @@
                   <h2>Taylor Swift - Lover</h2>
                 </div>
                 <div class="banner-button">
-                    <button>Listen Now</button>
+                  <button>Listen Now</button>
                 </div>
               </div>
             </div>
@@ -48,83 +48,46 @@
               <h1>Recently played</h1>
             </div>
             <div class="cover-container">
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/atlantis-cover.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>Atlantis</h1>
-                  <a href="">Güneş</a>
-                </div>
-              </div>
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/utopia-cover.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>UTOPIA</h1>
-                  <a href="">Forestella</a>
-                </div>
-              </div>
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/dunya-gunlukleri.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>Dünya Günlükleri</h1>
-                  <a href="">Adamlar</a>
-                </div>
-              </div>
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/millenium-cover.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>Millenium</h1>
-                  <a href="">Backstreet Boys</a>
-                </div>
-              </div>
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/all-risec-cover.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>All Rise</h1>
-                  <a href="">Blue</a>
-                </div>
-              </div>
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/akustik-travma-cover.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>Akustik Travma</h1>
-                  <a href="">Yüzyüzeyken Konuşuruz</a>
-                </div>
-              </div>
-              <div class="homepage-covers">
-                <div class="homepage-album-covers">
-                  <img src="album_covers/positions-cover.jpg" alt="" />
-                </div>
-                <div class="text-bg">
-                  <h1>Positions</h1>
-                  <a href="">Ariana Grande</a>
+              <div class="buttons">
+                <div class="homepage-covers">
+                  <div class="homepage-album-covers">
+                    <img src="album_covers/atlantis-cover.jpg" alt="" />
+                  </div>
+                  <div class="text-bg">
+                    <h1>Atlantis</h1>
+                    <a href="">Güneş</a>
+                    <button onclick="playmusic()">
+                      <i id="playPauseIcon" class="fa-solid fa-play"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="right-bar">
+            <h2>Arkadaş Etkinliği</h2>
+        </div>
       </div>
       <div class="footer">Footer</div>
     </div>
     <script>
-      const buttons = document.querySelectorAll(".aside-bar button");
-      buttons.forEach((button) => {
-        button.addEventListener("click", function () {
-          buttons.forEach((btn) => btn.classList.remove("active")); // Diğer butonlardan active sınıfını kaldır
-          this.classList.add("active"); // Basılan butona active sınıfını ekle
-        });
-      });
+        var audio = new Audio('musics/Güneş - Atlantis (_Underwater Video_).mp3');
+        var isPlaying = false;
+
+        function playmusic() {
+          var playPauseIcon = document.getElementById('playPauseIcon');
+
+          if (isPlaying) {
+            audio.pause()
+            isPlaying=false;
+            playPauseIcon.className = 'fa-solid fa-play';
+          } else {
+            audio.play();
+            isPlaying=true;
+            playPauseIcon.className = 'fa-solid fa-pause';
+          }
+        }
     </script>
   </body>
 </html>
