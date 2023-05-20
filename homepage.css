@@ -38,6 +38,7 @@ body {
 
 .home {
   display: flex;
+  background-color: #444;
 }
 
 .left-bar {
@@ -257,6 +258,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
+  /* justify-content: space-between; */
   justify-content: center;
   padding: 20px;
 }
@@ -265,6 +267,7 @@ body {
   width: 60%;
   max-width: 850px;
   height: 350px;
+  margin-right: 150px;
   background-image: url("artist-page-bg/taylor-swift-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -300,4 +303,34 @@ h2 {
   background-color: transparent;
   border: 2px solid rgba(0, 0, 0, 0.7);
   cursor: pointer;
+}
+
+.banner-music{
+  height: 350px;
+  width: 530px;
+  background-color: transparent;
+  box-shadow: ;
+  border-radius: 20px;
+}
+
+.banner-music h2{
+ color: white;
+ margin: 15px;
+}
+
+.most-liked{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 245px;
+  background-color: #bbb;
+  margin: 10px;
+  flex-direction: column;
+  float: left;
+}
+
+.picture{
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
 }
