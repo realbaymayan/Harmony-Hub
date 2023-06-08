@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>Music App</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="glass-container">
+        <main>
+          <h2 class="login-title">Who is listening?</h2>
+          <div id="avatarContainer" class="avatar-container"></div>
+          <div class="add-user">
+            <button id="addUserButton">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <span>Add User</span>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      // Function to create a new user element
+      function createNewUser(name, imageSrc) {
+        const newUser = document.createElement("a");
+        newUser.className = "avatar";
+
+        const img = document.createElement("img");
+        img.src = imageSrc;
+        newUser.appendChild(img);
+
+        const span = document.createElement("span");
+        span.textContent = name;
+        newUser.appendChild(span);
+
+        return newUser;
+      }
+      const links = document.querySelectorAll(".avatar");
+
+      links.forEach((link) => {
+        link.setAttribute("href", "index.html");
+      });
+
+      // Function to handle the click event on the "Add User" button
+      function addUser() {
+        const container = document.getElementById("avatarContainer");
+
+        const name = prompt("Enter the user's name:");
+        if (name) {
+          const fileInput = document.createElement("input");
+          fileInput.type = "file";
+          fileInput.accept = "image/*";
+
+          fileInput.onchange = function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function () {
+              const imageSrc = reader.result;
+              const newUser = createNewUser(name, imageSrc);
+              container.appendChild(newUser);
+            };
+            reader.readAsDataURL(file);
+          };
+
+          fileInput.click();
+        }
+      }
+
+      // Add event listener to the "Add User" button
+      const addButton = document.getElementById("addUserButton");
+      addButton.addEventListener("click", addUser);
+
+      // Initial users
+      const initialUsers = [
+        { name: "Gürkan", imageSrc: "assets/img/profiles/gurkan.jpg" },
+        { name: "Kerem", imageSrc: "assets/img/profiles/kerem.jpg" },
+        { name: "Umut", imageSrc: "assets/img/profiles/umut.png" },
+      ];
+
+      const container = document.getElementById("avatarContainer");
+      initialUsers.forEach((user) => {
+        const newUser = createNewUser(user.name, user.imageSrc);
+        container.appendChild(newUser);
+      });
+    </script>
+  </body>
+</html>

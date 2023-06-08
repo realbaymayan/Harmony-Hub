@@ -1,0 +1,383 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Music App</title>
+</head>
+
+<body>
+  <div class="app">
+    <div id="content" class="glass-container">
+      <aside class="aside">
+        <div class="logo">
+          <i class="fa-solid fa-music"></i>
+          <span> Harmony Hub</span>
+        </div>
+        <nav class="nav nav-item">
+          <ul>
+            <li class=""><a href="index.html">Listen now</a></li>
+            <li><a href="#0">Browse</a></li>
+            <li><a href="#0">Radio</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <h3>Library</h3>
+          <ul>
+            <li><i class="fa-solid fa-clock"></i><a href="#0">Recents</a></li>
+            <li><i class="fa-solid fa-record-vinyl"></i><a href="#0">Albums</a></li>
+            <li><i class="fa-solid fa-music"></i><a href="#0">Songs</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <h3>Playlists</h3>
+
+          <ul>
+            <li><a href="#0">Summer</a></li>
+            <li><a href="#0">Smasher vol.III</a></li>
+            <li><a href="#0">Vibes</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="header">
+          <div class="search-bar">
+            <input type="text" placeholder="Search" id="searchInput" />
+          </div>
+          <div id="searchResults"></div>
+          <div class="profile-container">
+            <button class="header-buttons">
+              <img src="assets/img/profiles/umut.png" />
+            </button>
+            <button id="theme-toggle" class="header-buttons">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="friends-activity-button" class="header-buttons">
+              <i class="fa-solid fa-user-group"></i>
+            </button>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="banner-container">
+            <div class="banner-title">
+              <div class="title">
+                <p>Out Now</p>
+                <h2>Taylor Swift - Lover</h2>
+              </div>
+              <div class="banner-button">
+                <button>Listen Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="last-played">
+          <h2 class="explore-title">Yakınlarda Çalınanlar</h2>
+          <div id="recentlyContainer" class="carousel"></div>
+        </div>
+        <div class="explore">
+          <h2 class="explore-title">Explore</h2>
+          <div class="carousel">
+            <div class="itemsC">
+              <div class="contents">
+                <h1 class="leftTxtDet">Dance Now!</h1>
+                <div class="textDet" style="background-color: #51507c">
+                  <p>
+                    Charlotte de Witte, Jai Wolf, Kelly Clarkson, DNCE, P!nk, Jason
+                    Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish, Ritt
+                    Momney, Jonas Brothers, Shawn Mendes
+                  </p>
+                </div>
+              </div>
+              <div class="bgImg">
+                <img src="https://i1.sndcdn.com/artworks-yXqUZmfwHodwDi8y-rjvrbA-t500x500.jpg" alt="image"
+                  srcset="" />
+              </div>
+            </div>
+            <div class="itemsC">
+              <div class="contents">
+                <h1 class="leftTxtDet">Levitating!</h1>
+                <div class="textDet" style="background-color: #51507c">
+                  <p>
+                    Dua Lipa, Jai Wolf, Kelly Clarkson, DNCE, P!nk, Jason
+                    Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish, Ritt
+                    Momney, Jonas Brothers, Shawn Mendes
+                  </p>
+                </div>
+              </div>
+              <div class="bgImg">
+                <img src="https://www.hqdiesel.net/gallery/albums/userpics/10004/normal_hqdiesel0969.jpg" alt="image"
+                  srcset="" />
+              </div>
+            </div>
+            <div class="itemsC">
+              <div class="contents">
+                <h1 class="leftTxtDet">Love</h1>
+                <div class="textDet" style="background-color: #51507c">
+                  <p>
+                    Taylor Swift, Jai Wolf, Kelly Clarkson, DNCE, P!nk, Jason Derulo,
+                    Ed Sheeran, WALK THE MOON, Billie Eilish, Ritt Momney,
+                    Jonas Brothers, Shawn Mendes
+                  </p>
+                </div>
+              </div>
+              <div class="bgImg">
+                <img src="https://www.hqdiesel.net/gallery/albums/userpics/1052219/normal_1000122177.jpg" alt="image"
+                  srcset="" />
+              </div>
+            </div>
+            <div class="itemsC">
+              <div class="contents">
+                <h1 class="leftTxtDet">Power!</h1>
+                <div class="textDet" style="background-color: #2c3e48">
+                  <p>
+                    Billie Eilish, Jai Wolf, Kelly Clarkson, DNCE, P!nk, Jason
+                    Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish, Ritt
+                    Momney, Jonas Brothers, Shawn Mendes
+                  </p>
+                </div>
+              </div>
+              <div class="bgImg">
+                <img src="https://pbs.twimg.com/media/EFeJlnYWwAAT-A5.jpg" alt="image" srcset="" />
+              </div>
+            </div>
+            <div class="itemsC">
+              <div class="contents">
+                <h1 class="leftTxtDet">Soft</h1>
+                <div class="textDet" style="background-color: #013e6a">
+                  <p>
+                    Olivia Rodrigo, Jai Wolf, Kelly Clarkson, DNCE, P!nk,
+                    Jason Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish,
+                    Ritt Momney, Jonas Brothers, Shawn Mendes
+                  </p>
+                </div>
+              </div>
+              <div class="bgImg">
+                <img src="https://i.scdn.co/image/ab6761610000e5ebee954a3b5418065c2fe253fb" alt="image"
+                  srcset="" />
+              </div>
+            </div>
+            <div class="itemsC">
+              <div class="contents">
+                <h1 class="leftTxtDet">Motive</h1>
+                <div class="textDet" style="background-color: #013e6a">
+                  <p>
+                    Ariana Grande, Doja Cat, Miley Cyrus, Sabrina Carpenter, Madison Beer,
+                    Drake, Melanie Martinez, Shakira, Britney Spears,
+                    Demi Lovato, Sean Paul, Halsey
+                  </p>
+                </div>
+              </div>
+              <div class="bgImg">
+                <img src="https://www.hqdiesel.net/gallery/albums/userpics/1052218/normal_ARIPOSITION-HQD009.jpg" alt="image"
+                  srcset="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="artists">
+          <h2 class="explore-title">Artists</h2>
+          <div class="carousel">
+            <div class="buttons">
+              <div class="homepage-covers">
+                <div class="homepage-artist-covers">
+                  <img src="assets/img/artist-profile-pictures/lana-del-rey.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1 style="color: white" id="musicTitle">Lana Del Rey</h1>
+                  <a id="artistLink" href="">Sanatçı</a>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <div class="homepage-covers">
+                <div class="homepage-artist-covers">
+                  <img src="assets/img/artist-profile-pictures/billie-eilish.jpeg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1 style="color: white" id="musicTitle">Billie Eilish</h1>
+                  <a id="artistLink" href="">Sanatçı</a>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <div class="homepage-covers">
+                <div class="homepage-artist-covers">
+                  <img src="assets/img/artist-profile-pictures/lil-zey.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1 style="color: white" id="musicTitle">Lil Zey</h1>
+                  <a id="artistLink" href="">Sanatçı</a>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <div class="homepage-covers">
+                <div class="homepage-artist-covers">
+                  <img src="assets/img/artist-profile-pictures/adamlar-pp.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1 style="color: white" id="musicTitle">Adamlar</h1>
+                  <a id="artistLink" href="">Sanatçı</a>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <div class="homepage-covers">
+                <div class="homepage-artist-covers">
+                  <img src="assets/img/artist-profile-pictures/gunes.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1 style="color: white" id="musicTitle">Güneş</h1>
+                  <a id="artistLink" href="">Sanatçı</a>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <div class="homepage-covers">
+                <div class="homepage-artist-covers">
+                  <img src="assets/img/artist-profile-pictures/duman-pp.jpg" alt="" />
+                </div>
+                <div class="text-bg">
+                  <h1 style="color: white" id="musicTitle">Duman</h1>
+                  <a id="artistLink" href="">Sanatçı</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside id="friends-activity" class="friends-activity">
+        <div id="activity-title" class="logo2">
+          <span>Friend Activity</span>
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="assets/img/profiles/umut.png" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Umut Yavuz</div>
+            <div class="friends-song">
+              <a href="">Flowers </a>
+              <a href="miley-cyrus.html">• Miley Cyrus</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Endless Summer Vaccation</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="assets/img/profiles/naz.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Naz Kaymak</div>
+            <div class="friends-song">
+              <a href="">Masal</a>
+              <a href="">• Motive</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">22</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="assets/img/profiles/gurkan.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Gürkan Can</div>
+            <div class="friends-song">
+              <a href="">Yerli Plaka</a>
+              <a href="">• Ceza</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Yerli Plaka2</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="assets/img/profiles/zeynep.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Zeynep Asrın</div>
+            <div class="friends-song">
+              <a href="">Tamirci Çırağı</a>
+              <a href="">• Cem Karaca</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Ölümsüzler</a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container">
+              <img class="player-pic" />
+            </div>
+            <div class="song-description">
+              <p class="now-playing-title">
+                
+              </p>
+              <p class="now-playing-artist"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <div class="play-pause">
+              <i class="play-pause2 fa-solid fa-play"></i>
+            </div>
+
+            <i class="fas fa-step-forward"></i> 
+            <i class="fas fa-undo-alt"></i>
+          </div>
+
+          <div class="progress-container">
+            <span class="current-time">0:00</span>
+            <input type="range" class="progress" min="0" max="100" value="0">
+            <span class="total-time">3:21</span>
+          </div>
+        </div>
+
+        <div class="other-features">
+          <div class="volume-bar">
+            <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+            <div class="player-volume-slider">
+              <div class="player-volume-slider-bar">
+                <div class="player-volume-slider-progress"></div>
+                <div class="player-volume-slider-handle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="/js/friend-activity.js"></script>
+  <script src="/js/light-mode.js"></script>
+  <script src="/js/volume-slider.js"></script>
+</body>
+
+</html>
