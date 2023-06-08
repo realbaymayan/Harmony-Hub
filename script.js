@@ -1,8 +1,8 @@
 var musicData = [
   {
-    title: "False Alarm",
-    artist: "The Weekend",
-    cover: "/starboy-cover.jpg",
+    title: "Million Dolar Man",
+    artist: "Lana Del Rey",
+    cover: "/born-to-die-cover.jpg",
     source: "/assets/musics/Diet-Mountain-Dew.mp3",
   },
   {

@@ -1,0 +1,457 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <link rel="stylesheet" href="albums-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Music App</title>
+</head>
+
+<body>
+  <div class="app">
+    <div id="content" class="glass-container">
+      <aside class="aside">
+        <div class="logo">
+          <i class="fa-solid fa-music"></i>
+          <span> Harmony Hub</span>
+        </div>
+        <nav class="nav nav-item">
+          <ul>
+            <li class=""><a href="../index.html">Listen now</a></li>
+            <li><a href="#0">Browse</a></li>
+            <li><a href="#0">Radio</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <h3>Library</h3>
+          <ul>
+            <li><i class="fa-solid fa-clock"></i><a href="#0">Recents</a></li>
+            <li><i class="fa-solid fa-star"></i><a href="../artist.html">Artists</a></li>
+            <li><i class="fa-solid fa-record-vinyl"></i><a href="albums/albums-page.html">Albums</a></li>
+            <li><i class="fa-solid fa-music"></i><a href="#0">Songs</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <h3>Playlists</h3>
+
+          <ul>
+            <li><a href="#0">Summer</a></li>
+            <li><a href="#0">Smasher vol.III</a></li>
+            <li><a href="#0">Vibes</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="header">
+          <div class="search-bar">
+            <input type="text" placeholder="Search" id="searchInput" />
+          </div>
+          <div id="searchResults"></div>
+          <div class="profile-container">
+            <button class="header-buttons">
+              <img src="../assets/img/profiles/umut.png" />
+            </button>
+            <button id="theme-toggle" class="header-buttons">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="friends-activity-button" class="header-buttons">
+              <i class="fa-solid fa-user-group"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="artists">
+          <h2 class="explore-title">Albums</h2>
+          <div class="album-carousel">
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+              <div class="albums-covers">
+                <div class="album-artist-covers">
+                <a href="#">
+                  <img style="cursor: pointer;" src="../assets/img/album_covers/atlantis-cover.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="album-text-bg">
+                <a href="#">
+                  <h1 style="color: white" id="musicTitle">Atlantis</h1>
+                  <a id="artistLink" href="#"> 2022 • <a class="artist-a" href="artist-gunes.html">Güneş</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/endless-summer-vacation.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="#">
+                    <h1 style="color: white" id="musicTitle">Endless Summer V..</h1>
+                    <a id="artistLink" href="">2023 • <a class="artist-a" href="artist-gunes.html">Miley Cyrus</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/dunya-gunlukleri.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="">
+                    <h1 style="color: white" id="musicTitle">Dünya Günlükleri</h1>
+                    <a id="artistLink" href="artist-gunes.html">2019 • <a class="artist-a" href="artist-gunes.html">Adamlar</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/born-to-die-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Born To Die</h1>
+                    <a id="artistLink" href="artist-gunes.html">2012 • <a class="artist-a" href="artist-gunes.html">Lana Del Rey</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/positions-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Positions</h1>
+                    <a id="artistLink" href="artist-gunes.html">2020 • <a class="artist-a" href="artist-gunes.html">Ariana Grande</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/starboy-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Starboy</h1>
+                    <a id="artistLink" href="artist-gunes.html">2016 • <a class="artist-a" href="artist-gunes.html">The Weekend</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/sour-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">SOUR</h1>
+                    <a id="artistLink" href="artist-gunes.html">2021 • <a class="artist-a" href="artist-gunes.html">Olivia Rodrigo</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/akustik-travma-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Akustik Travma</h1>
+                    <a id="artistLink" href="artist-gunes.html">2018 • <a class="artist-a" href="artist-gunes.html">Yüzyüzeyken Konuşuruz</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/masal-motive-cover.jpeg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">22</h1>
+                    <a id="artistLink" href="artist-gunes.html">2022 • <a class="artist-a" href="artist-gunes.html">Motive</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/millenium-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Millenium</h1>
+                    <a id="artistLink" href="artist-gunes.html">1999 • <a class="artist-a" href="artist-gunes.html">Backstreet Boys</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/olumsuzler-cover.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Ölümsüzler</h1>
+                    <a id="artistLink" href="artist-gunes.html">2004 • <a class="artist-a" href="artist-gunes.html">Cem Karaca</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/sur-eve-gunes.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Sür Eve</h1>
+                    <a id="artistLink" href="artist-gunes.html">2021 • <a class="artist-a" href="artist-gunes.html">Güneş</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/eskisi-gibi.jpeg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Eskisi Gibi</h1>
+                    <a id="artistLink" href="artist-gunes.html">2020 • <a class="artist-a" href="artist-gunes.html">Lil Zey</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/el-chavo-uzi.jpg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">EL CHAVO</h1>
+                    <a id="artistLink" href="artist-gunes.html">2022 • <a class="artist-a" href="artist-gunes.html">UZI</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+              <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="album-buttons">
+                <div class="albums-covers">
+                  <div class="album-artist-covers">
+                  <a href="artist-gunes.html">
+                    <img style="cursor: pointer;" src="../assets/img/album_covers/ben-bazen-simge.jpeg" alt="" />
+                  </a>
+                  </div>
+                  <div style="cursor: pointer;" class="album-text-bg">
+                  <a href="artist-gunes.html">
+                    <h1 style="color: white" id="musicTitle">Ben Bazen</h1>
+                    <a id="artistLink" href="artist-gunes.html">2018 • <a class="artist-a" href="artist-gunes.html">Simge</a></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------- -->
+          </div>
+        </div>
+      </main>
+      <aside id="friends-activity" class="friends-activity">
+        <div id="activity-title" class="logo2">
+          <span>Friend Activity</span>
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/umut.png" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Umut Yavuz</div>
+            <div class="friends-song">
+              <a href="">Flowers </a>
+              <a href="miley-cyrus.html">• Miley Cyrus</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Endless Summer Vaccation</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/naz.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Naz Kaymak</div>
+            <div class="friends-song">
+              <a href="">Masal</a>
+              <a href="">• Motive</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">22</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/gurkan.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-song">
+              <a href="">XXL</a>
+              <a href="">• UZI</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">EL CHAVO</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/zeynep.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Zeynep Asrın</div>
+            <div class="friends-song">
+              <a href="">Tamirci Çırağı</a>
+              <a href="">• Cem Karaca</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Ölümsüzler</a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container">
+              <img class="player-pic" />
+            </div>
+            <div class="song-description">
+              <p class="now-playing-title">
+                
+              </p>
+              <p class="now-playing-artist"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <div class="play-pause">
+              <i class="play-pause2 fa-solid fa-play"></i>
+            </div>
+
+            <i class="fas fa-step-forward"></i> 
+            <i class="fas fa-undo-alt"></i>
+          </div>
+
+          <div class="progress-container">
+            <span class="current-time">0:00</span>
+            <input type="range" class="progress" min="0" max="100" value="0">
+            <span class="total-time">3:21</span>
+          </div>
+        </div>
+
+        <div class="other-features">
+          <div class="volume-bar">
+            <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+            <div class="player-volume-slider">
+              <div class="player-volume-slider-bar">
+                <div class="player-volume-slider-progress"></div>
+                <div class="player-volume-slider-handle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="/js/friend-activity.js"></script>
+  <script src="/js/light-mode.js"></script>
+  <script src="/js/volume-slider.js"></script>
+</body>
+
+</html>
