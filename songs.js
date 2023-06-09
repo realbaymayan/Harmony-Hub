@@ -253,14 +253,26 @@ var musicData = [
       playButton.setAttribute("id", "playPauseIcon" + index);
       playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
   
-      playButton.addEventListener("click", function () {
-        var source = item.source;
-        var iconId = "playPauseIcon" + index;
-        var title = item.title;
-        var artist = item.artist;
-        var picClass = item.cover;
-        playMusic(source, iconId, title, artist, picClass, index);
-      });
+      var playButton = document.createElement("div");
+    playButton.className = "play-button ";
+    playButton.setAttribute("iconId", "playPauseIcon" + index);
+  
+
+    playButton.addEventListener("click", function () {
+      var source = item.source;
+      var iconId = "playPauseIcon" + index;
+      var title = item.title;
+      var artist = item.artist;
+      var picClass = item.cover;
+      playMusic(source, iconId, title, artist, picClass, index);
+    });
+
+    popularImage.appendChild(playButton);
+
+    var iconElement = document.createElement("i");
+    iconElement.id = "playPauseIcon" + index;
+    iconElement.classList.add("fa-solid", "fa-play");
+    playButton.appendChild(iconElement);
   
       popularImage.appendChild(playButton);
   
