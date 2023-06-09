@@ -61,8 +61,8 @@ var musicData = [
   
       var playButton = document.createElement("div");
       playButton.className = "play-button ";
-      playButton.setAttribute("id", "playPauseIcon" + index);
-      playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+      playButton.setAttribute("iconId", "playPauseIcon" + index);
+    
   
       playButton.addEventListener("click", function () {
         var source = item.source;
@@ -74,6 +74,11 @@ var musicData = [
       });
   
       popularImage.appendChild(playButton);
+  
+      var iconElement = document.createElement("i");
+      iconElement.id = "playPauseIcon" + index;
+      iconElement.classList.add("fa-solid", "fa-play");
+      playButton.appendChild(iconElement);
   
       var popularTextCover = document.createElement("div");
       popularTextCover.className = "popular-text-cover";

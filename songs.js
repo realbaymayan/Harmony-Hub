@@ -270,6 +270,13 @@ var musicData = [
       popularText.className = "popular-text";
       popularText.textContent = item.title;
       popularTextCover.appendChild(popularText);
+
+      var popularArtistCover = document.createElement("div");
+      popularArtistCover.className = "popular-artist-cover";
+      var popularArtist = document.createElement("div");
+      popularArtist.className = "popular-artist";
+      popularArtist.textContent = item.artist;
+      popularArtistCover.appendChild(popularArtist);
   
       var popularListenedCover = document.createElement("div");
       popularListenedCover.className = "popular-listened-cover";
@@ -290,6 +297,7 @@ var musicData = [
       popularItem.appendChild(popularNumbers);
       popularItem.appendChild(popularImage);
       popularItem.appendChild(popularTextCover);
+      popularItem.appendChild(popularArtistCover);
       popularItem.appendChild(popularListenedCover);
       popularItem.appendChild(popularSongMinuteCover);
   

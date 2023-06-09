@@ -872,14 +872,14 @@ h2 {
   display: flex;
 }
 
-.popular-text-cover {
+.popular-text-cover, .popular-artist-cover {
   display: flex;
   width: 40%;
   align-items: center;
   padding-left: 22px;
   /* background-color: #e60000; */
 }
-.popular-text {
+.popular-text, .popular-artist {
   font-size: 14px;
   display: -webkit-box;
   -webkit-line-clamp: 1; /* En fazla 3 satıra kadar keser */
