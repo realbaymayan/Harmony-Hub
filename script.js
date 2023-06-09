@@ -192,7 +192,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     var artistLinkElement = document.createElement("a");
     var artistName = convertToEnglish(musicItem.artist);
-    artistLinkElement.href = "artist-" + artistName.toLowerCase() + ".html";
+    artistLinkElement.href = "artist/artist-" + artistName.toLowerCase() + ".html";
     artistLinkElement.textContent = musicItem.artist;
     textBgElement.appendChild(artistLinkElement);
 

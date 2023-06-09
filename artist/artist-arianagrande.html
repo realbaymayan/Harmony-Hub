@@ -1,0 +1,340 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/f8d7233e05.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Music App</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <div id="content" class="glass-container">
+        <aside class="aside">
+          <div class="logo">
+            <i class="fa-solid fa-music"></i>
+            <span> Harmony Hub</span>
+          </div>
+          <nav class="nav nav-item">
+            <ul>
+              <li class=""><a href="../index.html">Listen now</a></li>
+              <li><a href="#0">Browse</a></li>
+              <li><a href="#0">Radio</a></li>
+            </ul>
+          </nav>
+
+          <nav class="nav">
+            <h3>Library</h3>
+            <ul>
+              <li><i class="fa-solid fa-clock"></i><a href="../recently.html">Recents</a></li>
+              <li><i class="fa-solid fa-star"></i><a href="artist.html">Artists</a></li>
+              <li><i class="fa-solid fa-record-vinyl"></i><a href="../albums/albums-page.html">Albums</a></li>
+              <li><i class="fa-solid fa-music"></i><a href="../songs.html">Songs</a></li>
+            </ul>
+          </nav>
+
+          <nav class="nav">
+            <h3>Playlists</h3>
+
+            <ul>
+              <li><a href="#0">Summer</a></li>
+              <li><a href="#0">Smasher vol.III</a></li>
+              <li><a href="#0">Vibes</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <main class="artist-main">
+          <div class="header">
+            <div class="search-bar">
+              <input type="text" placeholder="Search" />
+            </div>
+            <div class="profile-container">
+              <button class="header-buttons">
+                <img src="../assets/img/profiles/umut.png" />
+              </button>
+              <button id="theme-toggle" class="header-buttons">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button id="friends-activity-button" class="header-buttons">
+                <i class="fa-solid fa-user-group"></i>
+              </button>
+            </div>
+          </div>
+          <!-------------------------------------------------- Artist Design  ------------------------------------------------>
+
+          <div class="artist-banner">
+            <div class="artist-banner-container">
+              <video
+                autoplay
+                loop
+                muted
+                plays-inline
+                class="back-video"
+                src="../assets/artist-videos/ariana.mp4"
+              ></video>
+              <div class="artist-banner-title">
+                <div class="artist-title">
+                  <h2 style="font-size: 44px">Ariana Grande</h2>
+                  <p style="font-size: 15px">Aylık 71.158.634 dinleyici</p>
+                </div>
+                <!-- <div class="artist-banner-button">
+                <button>Listen Now</button>
+              </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="last-played">
+            <h2 class="explore-title">Popüler</h2>
+          </div>
+          <div id="popular-container" class="popular-container"></div>
+          <div class="last-played">
+            <h2 class="explore-title">Diskografi</h2>
+          </div>
+          <div class="diskografi-cover-bg">
+            <div class="diskografi-cover">
+              <div class="diskografi-image">
+                <img src="../assets/img/album_covers/positions-cover.jpg" alt="" />
+                <div class="artist-page-album-title">positions</div>
+                <div class="artist-page-album-info">2020 • Album</div>
+              </div>
+            </div>
+            <div class="diskografi-cover">
+              <div class="diskografi-image">
+                <img src="../assets/img/album_covers/thank-u-next.jpg" alt="" />
+                <div class="artist-page-album-title">thank u, next</div>
+                <div class="artist-page-album-info">2019 • Album</div>
+              </div>
+            </div>
+            <div class="diskografi-cover">
+              <div class="diskografi-image">
+                <img
+                  src="../assets/img/album_covers/sweetener.jpg"
+                  alt=""
+                />
+                <div class="artist-page-album-title">
+                  Sweetener
+                </div>
+                <div class="artist-page-album-info">2018 • Album</div>
+              </div>
+            </div>
+            <div class="diskografi-cover">
+                <div class="diskografi-image">
+                  <img
+                    src="../assets/img/album_covers/dangerous-woman.jpg"
+                    alt=""
+                  />
+                  <div class="artist-page-album-title">
+                    Dangerous Woman
+                  </div>
+                  <div class="artist-page-album-info">2016 • Album</div>
+                </div>
+              </div>
+
+            
+          </div>
+
+          <div class="last-played">
+            <h2 class="explore-title">Video Klipler</h2>
+          </div>
+          <div class="video-clips-bg">
+            <div class="video-clips-cover">
+              <div class="deneme">
+                <a
+                  target="_blank"
+                  href="https://youtu.be/tcYodQoapMg"
+                >
+                  <img
+                    src="../assets/artist-page-video-clips/positions.jpg"
+                    alt=""
+                  />
+                  <h3>positions</h3>
+                  <h4>2020</h4>
+                  <span class="play-button2"></span>
+                </a>
+              </div>
+            </div>
+            <div class="video-clips-cover">
+              <div class="deneme">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=9WbCfHutDSE&pp=ygUPZGFuZ2Vyb3VzIHdvbWFu"
+                >
+                  <img
+                    src="../assets/artist-page-video-clips/dangerous-woman.jpg"
+                    alt=""
+                  />
+                  <h3>Dangerous Woman</h3>
+                  <h4>2016</h4>
+                  <span class="play-button2"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="last-played">
+            <h2 class="explore-title">Hakkında</h2>
+          </div>
+
+          <div class="artist-info-bg">
+            <div class="artist-info">
+              <img src="../assets/artist-info-cover/ariana.jpeg" alt="" />
+              <div class="artist-info-listener">
+                <h4>Aylık 71.158.634 dinleyici</h4>
+                <h5>
+                    Ariana Grande-Butera (d. 26 Haziran 1993), 2 Grammy Ödülü 
+                    sahibi Amerikan & İtalyan şarkıcı, söz yazarı, iş insanı ve
+                     aktris. Boca Raton, Florida'da doğdu. Çoğu kişisel deneyimlere
+                      dayanan müziği, medyanın yoğun ilgisine konuk olurken, dört oktavlık 
+                      vokali eleştirel beğeni topladı. Kariyeri boyunca 2 Grammy ödülü, bir Brit Award, 2
+                       Billboard Müzik ödülü, 3 Amerikan Müzik ödülü 9 MTV Video Müzik ödülü ve 27 Guinness Dünya 
+                       Rekoru dahil olmak üzere birçok ödül aldı. Kariyerine 2008'de Broadway müzikalinde başladı ve Nickelodeon
+                        sitcom'u Victorious (2010–2013) ve daha sonra da yan dizisi Sam & Cat'deki (2013–2014) Cat Valentine rolüyle
+                         ünlendi. Müzik kariyerine olan ilgisi artınca Victorious dizi müzikleri için birkaç şarkı kaydetti. YouTube'a 
+                         yüklediği şarkı cover'larını fark eden Republic Records ile 2011'de anlaşma imzaladı. Çıkış albümü Yours Truly 
+                         3 Eylül 2013'te piyasaya sürüldü. 1950'lerin doo-wop etkili pop ve R&B tarzı albümü ABD Billboard 200 listesine 1 
+                         numaradan giriş yaptı ve "The Way" adlı 
+                    parçası Billboard Hot 100 listesinde ilk 10 şarkı arasına girerek Grande'ye listenin ilk girişini yaşattı.
+                    
+                </h5>
+              </div>
+            </div>
+          </div>
+          <!-------------------------------------------------- Artist Design  ------------------------------------------------>
+        </main>
+        <aside id="friends-activity" class="friends-activity">
+          <div id="activity-title" class="logo2">
+            <span>Friend Activity</span>
+            <i class="fa-solid fa-user-group"></i>
+          </div>
+          <div class="friends-profile">
+            <div class="friends-picture">
+              <img src="../assets/img/profiles/umut.png" alt="" />
+            </div>
+            <div>
+              <div class="friends-name">Umut Yavuz</div>
+              <div class="friends-song">
+                <a href="">Flowers </a>
+                <a href="">• Miley Cyrus</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href="">Endless Summer Vaccation</a>
+              </div>
+            </div>
+          </div>
+          <div class="friends-profile">
+            <div class="friends-picture">
+              <img src="../assets/img/profiles/naz.jpg" alt="" />
+            </div>
+            <div>
+              <div class="friends-name">Naz Kaymak</div>
+              <div class="friends-song">
+                <a href="">Masal</a>
+                <a href="">• Motive</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href="">22</a>
+              </div>
+            </div>
+          </div>
+          <div class="friends-profile">
+            <div class="friends-picture">
+              <img src="../assets/img/profiles/gurkan.jpg" alt="" />
+            </div>
+            <div>
+              <div class="friends-name">Gürkan Can</div>
+              <div class="friends-song">
+                <a href="">XXL</a>
+                <a href="">• UZI</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href="">El CHAVO</a>
+              </div>
+            </div>
+          </div>
+          <div class="friends-profile">
+            <div class="friends-picture">
+              <img src="../assets/img/profiles/zeynep.jpg" alt="" />
+            </div>
+            <div>
+              <div class="friends-name">Zeynep Asrın</div>
+              <div class="friends-song">
+                <a href="">Tamirci Çırağı</a>
+                <a href="">• Cem Karaca</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href="">Ölümsüzler</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="music-player">
+          <div class="song-bar">
+            <div class="song-infos">
+              <div class="image-container">
+                <img class="player-pic" />
+              </div>
+              <div class="song-description">
+                <p class="now-playing-title"></p>
+                <p class="now-playing-artist"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-controller">
+            <div class="control-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <div class="play-pause">
+                <i class="play-pause2 fa-solid fa-play"></i>
+              </div>
+
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-undo-alt"></i>
+            </div>
+
+            <div class="progress-container">
+              <span class="current-time">0:00</span>
+              <input
+                type="range"
+                class="progress"
+                min="0"
+                max="100"
+                value="0"
+              />
+              <span class="total-time">3:21</span>
+            </div>
+          </div>
+
+          <div class="other-features">
+            <div class="volume-bar">
+              <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+              <div class="player-volume-slider">
+                <div class="player-volume-slider-bar">
+                  <div class="player-volume-slider-progress"></div>
+                  <div class="player-volume-slider-handle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/friend-activity.js"></script>
+    <script src="../js/light-mode.js"></script>
+    <script src="../js/volume-slider.js"></script>
+    <script src="artist-arianagrande.js"></script>
+  </body>
+</html>

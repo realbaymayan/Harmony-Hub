@@ -1,0 +1,496 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="artist-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Music App</title>
+</head>
+
+<body>
+  <div class="app">
+    <div id="content" class="glass-container">
+      <aside class="aside">
+        <div class="logo">
+          <i class="fa-solid fa-music"></i>
+          <span> Harmony Hub</span>
+        </div>
+        <nav class="nav nav-item">
+          <ul>
+            <li class=""><a href="../index.html">Listen now</a></li>
+            <li><a href="#0">Browse</a></li>
+            <li><a href="#0">Radio</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <h3>Library</h3>
+          <ul>
+            <li><i class="fa-solid fa-clock"></i><a href="../recently.html">Recents</a></li>
+            <li><i class="fa-solid fa-star"></i><a href="../artist.html">Artists</a></li>
+            <li><i class="fa-solid fa-record-vinyl"></i><a href="../albums/albums-page.html">Albums</a></li>
+            <li><i class="fa-solid fa-music"></i><a href="../songs.html">Songs</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <h3>Playlists</h3>
+
+          <ul>
+            <li><a href="#0">Summer</a></li>
+            <li><a href="#0">Smasher vol.III</a></li>
+            <li><a href="#0">Vibes</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="header">
+          <div class="search-bar">
+            <input type="text" placeholder="Search" id="searchInput" />
+          </div>
+          <div id="searchResults"></div>
+          <div class="profile-container">
+            <button class="header-buttons">
+              <img src="../assets/img/profiles/umut.png" />
+            </button>
+            <button id="theme-toggle" class="header-buttons">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="friends-activity-button" class="header-buttons">
+              <i class="fa-solid fa-user-group"></i>
+            </button>
+          </div>
+        </div>
+        
+        
+        <div class="artists">
+          <h2 class="explore-title">Artists</h2>
+          <div class="album-carousel">
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/gunes.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Güneş</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-motive.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/motive.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-motive.html">
+                  <h1 style="color: white" id="musicTitle">Motive</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-motive.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/album_covers/endless-summer-vacation.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Miley Cyrus</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/uzi" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">UZİ</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/billie-eilish.jpeg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Billie Eilish</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/taylor-swift.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Taylor Swift</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/lana-del-rey.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Lana Del Rey</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/lil-zey.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Lil Zey</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/sezen-aksu.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Sezen Aksu</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/adamlar-pp.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Adamlar</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/rem.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">R.E.M.</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/karsu.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Karsu</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/anne-marie.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Anne Marie</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/zeynep-bastik.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Zeynep Bastık</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/halsey.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Halsey</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/madison-beer.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Madison Beer</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------------------------------- -->
+            <div class="artist-buttons">
+              <div class="artist-covers">
+                <div class="artist-artist-covers">
+                <a href="artist-gunes.html">
+                  <img style="cursor: pointer;" src="/assets/img/artist-profile-pictures/kendrick-lamar.jpg" alt="" />
+                </a>
+                </div>
+                <div style="cursor: pointer;" class="artist-text-bg">
+                <a href="artist-gunes.html">
+                  <h1 style="color: white" id="musicTitle">Kendrick Lamar</h1>
+                  <a id="artistLink" href="#"><a class="artist-a" href="artist-gunes.html">Sanatçı</a> </a>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            
+            
+          </div>
+        </div>
+        
+      </main>
+      <aside id="friends-activity" class="friends-activity">
+        <div id="activity-title" class="logo2">
+          <span>Friend Activity</span>
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/umut.png" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Umut Yavuz</div>
+            <div class="friends-song">
+              <a href="">Flowers </a>
+              <a href="miley-cyrus.html">• Miley Cyrus</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Endless Summer Vaccation</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/naz.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Naz Kaymak</div>
+            <div class="friends-song">
+              <a href="">Masal</a>
+              <a href="">• Motive</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">22</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/gurkan.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Gürkan Can</div>
+              <div class="friends-song">
+                <a href="">XXL</a>
+                <a href="">• UZI</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href="">El CHAVO</a>
+              </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="../assets/img/profiles/zeynep.jpg" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Zeynep Asrın</div>
+            <div class="friends-song">
+              <a href="">Tamirci Çırağı</a>
+              <a href="">• Cem Karaca</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Ölümsüzler</a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container">
+              <img class="player-pic" />
+            </div>
+            <div class="song-description">
+              <p class="now-playing-title">
+                
+              </p>
+              <p class="now-playing-artist"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <div class="play-pause">
+              <i class="play-pause2 fa-solid fa-play"></i>
+            </div>
+
+            <i class="fas fa-step-forward"></i> 
+            <i class="fas fa-undo-alt"></i>
+          </div>
+
+          <div class="progress-container">
+            <span class="current-time">0:00</span>
+            <input type="range" class="progress" min="0" max="100" value="0">
+            <span class="total-time">3:21</span>
+          </div>
+        </div>
+
+        <div class="other-features">
+          <div class="volume-bar">
+            <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+            <div class="player-volume-slider">
+              <div class="player-volume-slider-bar">
+                <div class="player-volume-slider-progress"></div>
+                <div class="player-volume-slider-handle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="/js/friend-activity.js"></script>
+  <script src="/js/light-mode.js"></script>
+  <script src="/js/volume-slider.js"></script>
+</body>
+
+</html>

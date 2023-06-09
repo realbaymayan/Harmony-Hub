@@ -1119,7 +1119,7 @@ h2 {
   .album-artist-covers img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: var(--content-bg);
     border: 1px solid var(--theme-bg-color);
     margin: 0;

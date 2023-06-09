@@ -313,6 +313,17 @@ h2 {
   cursor: pointer;
 }
 
+.last-played a {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+
+.last-played a:hover {
+    color: white;
+  text-decoration: underline;
+}
+
+
 /*    EXPLORE    */
 .last-played,
 .explore,
@@ -443,7 +454,6 @@ h2 {
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
-  width: 25%;
 }
 
 .song-infos {
@@ -461,29 +471,28 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-.song-description p {
-  margin: 0.2em;
+.song-description {
+  margin-right: 1em;
 }
 .now-playing-title,
 .now-playing-artist {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  font-size: 13px;
   overflow: hidden;
 }
 .now-playing-title:hover,
 .now-playing-artist:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 .now-playing-artist {
-  color: var(--secondary-color);
+  color: #ccc;
 }
 .icons {
   display: flex;
   gap: 1em;
 }
 .progress-controller {
-  width: 100%;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -547,7 +556,7 @@ h2 {
 }
 .volume-bar {
   display: flex;
-  width: 200px;
+  padding: 20px;
   flex-direction: row;
   justify-content: center;
 
@@ -871,7 +880,11 @@ h2 {
   /* background-color: #e60000; */
 }
 .popular-text {
-  font-size: 18px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* En fazla 3 satıra kadar keser */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .popular-listened-cover {
   display: flex;
@@ -908,6 +921,9 @@ h2 {
   display: flex;
   justify-content: center;
 }
+.diskografi-cover:hover {
+  background-color: #666;
+}
 
 .diskografi-image {
   margin: 12px;
@@ -929,37 +945,67 @@ h2 {
   margin-top: 5px;
 }
 
-.video-clips-bg{
+.video-clips-bg {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.video-clips-cover{
+.video-clips-cover {
   height: 275px;
   width: 475px;
   margin: 15px;
   border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  background-color: black;
 }
-.video-clips-cover img{
+.video-clips-cover img {
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  opacity: 0.7;
+  background-color: black;
 }
-.video-clips-cover h3,h4{
+.video-clips-cover h3,
+h4 {
   margin: 8px;
 }
+.play-button2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: none;
+}
+.play-button2:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent white;
+}
 
-.video-clips-button{
+.deneme:hover .play-button2 {
+  display: block;
+}
+
+.video-clips-button {
   height: 275px;
   width: 475px;
   margin: 15px;
   border-radius: 10px;
   border: none;
-  background-color: tr;
+  background-color: transparent;
 }
-
 
 .deneme {
   position: relative;
@@ -978,7 +1024,6 @@ h2 {
   margin: 0;
   padding: 10px;
   color: white;
-  
 }
 
 .deneme h4 {
@@ -986,27 +1031,33 @@ h2 {
   top: 75%;
 }
 
-.video-clips-button img{
+.video-clips-button img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.artist-info-bg{
+.artist-info-bg {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.artist-info{
+.artist-info {
   margin: 0px 15px 0px 15px;
-  border-radius: 5px;
+  border-radius: 20px;
   height: 350px;
   width: 650px;
   background-color: black;
   position: relative;
+  border: 1px solid var(--theme-bg-color);
+  transition: transform 0.1s ease-in;
 }
-.artist-info img{
+
+.artist-info:hover {
+  transform: scale(1.02);
+}
+.artist-info img {
   height: 100%;
   width: 100%;
   border-radius: 20px;
@@ -1014,13 +1065,13 @@ h2 {
   opacity: 0.6;
 }
 
-.artist-info-listener{
+.artist-info-listener {
   background-color: s;
   position: absolute;
   bottom: 0;
   left: 0;
   color: white;
-  padding: 10px;
+  padding: 18px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -1032,10 +1083,13 @@ h2 {
 
 .artist-info-listener h5 {
   font-size: 13px;
-  font-weight:normal;
+  padding: 0 8px;
+  font-weight: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* En fazla 3 satıra kadar keser */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-
-
 
 /* ------------------------------------------ Artist Page End ---------------------------------------------------------- */
 
