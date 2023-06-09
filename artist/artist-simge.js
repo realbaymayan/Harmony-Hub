@@ -3,7 +3,7 @@ var musicData = [
       title: "Aşkın Olayım",
       artist: "Simge",
       cover: "../assets/img/album_covers/ben-bazen-simge.jpeg",
-      source: "../assets/musics/Million-Dollar-Man.mp4",
+      source: "../assets/musics/Aşkın Olayım.mp4",
       listenedCount: "141.173.175",
     },
     {
