@@ -9,6 +9,9 @@
 
 #### Harmony Hub is an innovative project that aims to provide music lovers with a unique music experience. With its user-friendly interface, vast music library, and personalized features, it strives to meet the needs of users and offer them an enjoyable music experience.
 
+
+[Review the project]([http://www.siteadi.com](https://main--stellar-lebkuchen-e43024.netlify.app/index.html))
+
 ### TR
 
 ## Hakkında
@@ -17,6 +20,8 @@
 #### Harmony Hub, geliştiricinin müzik deneyimini daha kullanıcı dostu hale getirmek ve müzik keyfini en üst düzeye çıkarmak için birçok yenilikçi özellik sunar. Bu projenin temel amacı, müzik severlere farklı sağlayıcılardaki geniş müzik kütüphanelerine erişim sağlama imkanı sunmak ve kullanıcıların müzik keşfetme deneyimini geliştirmektir.
 
 #### Bunun yanı sıra, Harmony Hub geliştiricinin kendi kod yazma becerilerini geliştirmek ve yeni teknolojileri deneyimlemek için bir fırsat sunar. Bu proje, geliştiricinin yeteneklerini sergilemesi ve müzik alanında kendini geliştirmesi için bir platform sağlar.
+
+[Projeyi İnceleyin]([http://www.siteadi.com](https://main--stellar-lebkuchen-e43024.netlify.app/index.html))
 
 ## Screenshots
 ![GitHub](site-images/users.png)
