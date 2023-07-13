@@ -22,7 +22,7 @@
 
 #### Bunun yanı sıra, Harmony Hub geliştiricinin kendi kod yazma becerilerini geliştirmek ve yeni teknolojileri deneyimlemek için bir fırsat sunar. Bu proje, geliştiricinin yeteneklerini sergilemesi ve müzik alanında kendini geliştirmesi için bir platform sağlar.
 
-[Projeyi İnceleyin](https://main--stellar-lebkuchen-e43024.netlify.app/index.html]
+[Projeyi İnceleyin](https://main--stellar-lebkuchen-e43024.netlify.app/index.html)
 
 ## Screenshots
 ![GitHub](site-images/users.png)
