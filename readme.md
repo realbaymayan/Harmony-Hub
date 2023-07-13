@@ -11,6 +11,7 @@
 
 
 [Review the project](https://main--stellar-lebkuchen-e43024.netlify.app/index.html]
+[OpenAI](https://www.openai.com)
 
 ### TR
 
