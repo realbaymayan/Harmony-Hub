@@ -10,8 +10,8 @@
 #### Harmony Hub is an innovative project that aims to provide music lovers with a unique music experience. With its user-friendly interface, vast music library, and personalized features, it strives to meet the needs of users and offer them an enjoyable music experience.
 
 
-[Review the project](https://main--stellar-lebkuchen-e43024.netlify.app/index.html]
-[OpenAI](https://www.openai.com)
+
+[Review the project](https://main--stellar-lebkuchen-e43024.netlify.app/index.html)
 
 ### TR
 
