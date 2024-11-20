@@ -490,57 +490,88 @@ var musicData = [
     }
   });
   
-  // Get the search input element
-  var searchInput = document.getElementById("searchInput");
-  // Get the search results element
-  var searchResults = document.getElementById("searchResults");
-  
-  // Function to perform the search
+  // Search functionality
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+
   function searchMusic() {
-    // Clear previous search results
-    searchResults.innerHTML = "";
-  
-    // Get the search query
-    var query = searchInput.value.toLowerCase().trim();
-  
-    // Check if the search query is empty
-    if (query === "") {
-      return; // Exit the function if the query is empty
+    const query = searchInput.value.toLowerCase().trim();
+    
+    // Arama durumuna göre search-bar class'ını güncelle
+    const searchBar = document.querySelector('.search-bar');
+    if (query !== '') {
+      searchBar.classList.add('searching');
+    } else {
+      searchBar.classList.remove('searching');
+      searchResults.style.display = 'none';
+      return;
     }
-  
-    // Filter the musicData array based on the search query
-    var filteredMusic = musicData.filter(function (music) {
-      var title = music.title.toLowerCase();
-      var artist = music.artist.toLowerCase();
-      return title.includes(query) || artist.includes(query);
-    });
-  
-    // Display the search results
-    filteredMusic.forEach(function (music) {
-      var resultItem = document.createElement("div");
-      resultItem.classList.add("search-result");
-  
-      var coverImage = document.createElement("img");
-      coverImage.src = music.cover;
-      coverImage.alt = music.title;
-      resultItem.appendChild(coverImage);
-  
-      var musicInfo = document.createElement("div");
-      musicInfo.classList.add("music-info");
-  
-      var title = document.createElement("h3");
-      title.textContent = music.title;
-      musicInfo.appendChild(title);
-  
-      var artist = document.createElement("h4");
-      artist.textContent = music.artist;
-      musicInfo.appendChild(artist);
-  
-      resultItem.appendChild(musicInfo);
-      searchResults.appendChild(resultItem);
-    });
+
+    // musicData array'inden filtreleme yap
+    const filteredMusic = musicData.filter(music => 
+      music.title.toLowerCase().includes(query) || 
+      music.artist.toLowerCase().includes(query)
+    );
+
+    // Sonuçları göster
+    searchResults.style.display = 'block';
+    searchResults.innerHTML = ''; // Önceki sonuçları temizle
+    
+    if (filteredMusic.length > 0) {
+      filteredMusic.forEach((music, index) => {
+        const resultItem = document.createElement('div');
+        resultItem.classList.add('search-result');
+        
+        resultItem.innerHTML = `
+          <img src="${music.cover}" alt="${music.title}">
+          <div class="music-info">
+            <h3>${music.title}</h3>
+            <h4>${music.artist}</h4>
+          </div>
+        `;
+        
+        // Şarkıya tıklandığında çalma
+        resultItem.addEventListener('click', () => {
+          playMusic(
+            music.source,
+            `playPauseIcon${musicData.indexOf(music)}`,
+            music.title,
+            music.artist,
+            music.cover,
+            musicData.indexOf(music)
+          );
+          searchResults.style.display = 'none';
+          searchInput.value = '';
+          searchBar.classList.remove('searching');
+        });
+        
+        searchResults.appendChild(resultItem);
+      });
+    } else {
+      searchResults.innerHTML = '<div class="no-results">Sonuç bulunamadı</div>';
+    }
   }
-  
-  // Add event listener for the search input
-  searchInput.addEventListener("input", searchMusic);
+
+  // Her karakter girildiğinde arama yap
+  searchInput.addEventListener('input', searchMusic);
+
+  // Input'a focus olduğunda ve içinde yazı varsa sonuçları göster
+  searchInput.addEventListener('focus', () => {
+    if (searchInput.value.trim() !== '') {
+      searchMusic();
+    }
+  });
+
+  // Sayfa herhangi bir yerine tıklandığında sonuçları gizle
+  document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+      searchResults.style.display = 'none';
+      document.querySelector('.search-bar').classList.remove('searching');
+    }
+  });
+
+  // Sonuçlar içinde tıklama olayının dışarı yayılmasını engelle
+  searchResults.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
   

@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -54,7 +54,8 @@
         <main class="artist-main">
           <div class="header">
             <div class="search-bar">
-              <input type="text" placeholder="Search" />
+              <input type="text" id="searchInput" placeholder="Search" />
+              <div id="searchResults" class="search-results-dropdown"></div>
             </div>
             <div class="profile-container">
               <button class="header-buttons">
@@ -110,6 +111,38 @@
               <div class="friends-album">
                 <i class="fa-solid fa-record-vinyl"></i>
                 <a href="">Endless Summer Vaccation</a>
+              </div>
+            </div>
+          </div>
+          <div class="friends-profile">
+            <div class="friends-picture">
+              <img src="assets/img/profiles/efe.png" alt="" />
+            </div>
+            <div>
+              <div class="friends-name">Efe Türkoğu</div>
+              <div class="friends-song">
+                <a href="">Karma </a>
+                <a href="miley-cyrus.html">• Şehinşah</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href=""> Karma</a>
+              </div>
+            </div>
+          </div>
+          <div class="friends-profile">
+            <div class="friends-picture">
+              <img src="assets/img/profiles/beyza.png" alt="" />
+            </div>
+            <div>
+              <div class="friends-name">Beyza Acar</div>
+              <div class="friends-song">
+                <a href="">Bi Bak Bana </a>
+                <a href="miley-cyrus.html">• Skopava</a>
+              </div>
+              <div class="friends-album">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <a href="">Ben Senden Vazgeçtim</a>
               </div>
             </div>
           </div>
@@ -219,5 +252,85 @@
     <script src="js/light-mode.js"></script>
     <script src="js/volume-slider.js"></script>
     <script src="songs.js"></script>
+    <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    function searchMusic() {
+      const query = searchInput.value.toLowerCase().trim();
+      
+      // Arama durumuna göre search-bar class'ını güncelle
+      const searchBar = document.querySelector('.search-bar');
+      if (query !== '') {
+        searchBar.classList.add('searching');
+      } else {
+        searchBar.classList.remove('searching');
+        searchResults.style.display = 'none';
+        return;
+      }
+
+      // musicData array'inden filtreleme yap
+      const filteredMusic = musicData.filter(music => 
+        music.title.toLowerCase().includes(query) || 
+        music.artist.toLowerCase().includes(query)
+      );
+
+      // Sonuçları göster
+      searchResults.style.display = 'block';
+      searchResults.innerHTML = '';
+      
+      if (filteredMusic.length > 0) {
+        filteredMusic.forEach((music, index) => {
+          const resultItem = document.createElement('div');
+          resultItem.classList.add('search-result');
+          
+          resultItem.innerHTML = `
+            <img src="${music.cover}" alt="${music.title}">
+            <div class="music-info">
+              <h3>${music.title}</h3>
+              <h4>${music.artist}</h4>
+            </div>
+          `;
+          
+          resultItem.addEventListener('click', () => {
+            playMusic(
+              music.source,
+              `playPauseIcon${musicData.indexOf(music)}`,
+              music.title,
+              music.artist,
+              music.cover,
+              musicData.indexOf(music)
+            );
+            searchResults.style.display = 'none';
+            searchInput.value = '';
+            searchBar.classList.remove('searching');
+          });
+          
+          searchResults.appendChild(resultItem);
+        });
+      } else {
+        searchResults.innerHTML = '<div class="no-results">Sonuç bulunamadı</div>';
+      }
+    }
+
+    searchInput.addEventListener('input', searchMusic);
+
+    searchInput.addEventListener('focus', () => {
+      if (searchInput.value.trim() !== '') {
+        searchMusic();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+        document.querySelector('.search-bar').classList.remove('searching');
+      }
+    });
+
+    searchResults.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+    </script>
   </body>
 </html>

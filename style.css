@@ -5,7 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-family: var(--body-font);
-  background: url("/assets/img/appbg.png") no-repeat fixed;
+  background: url("assets/img/appbg.png") no-repeat fixed;
   background-size: cover;
 }
 ::-webkit-scrollbar {
@@ -168,30 +168,22 @@ main {
 
 /*   SEARCH BAR   */
 .search-bar {
+  position: relative;
   flex-grow: 1;
-  display: flex;
-  align-items: center;
-  height: 42px;
-  width: 100%;
   max-width: 400px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: var(--theme-bg-color);
-  border-radius: 12px;
-  box-shadow: 0 0 0 2px rgba(134, 140, 160, 0.2);
 }
 
 .search-bar input {
   width: 100%;
-  height: 100%;
-  background-color: initial;
-  font-family: var(--body-font);
-  font-weight: 500;
+  height: 42px;
+  border-radius: 12px;
+  background-color: var(--theme-bg-color);
+  border: 1px solid var(--border-color);
+  padding: 0 15px;
   font-size: 15px;
-  border: none;
-  padding: 0px 10px;
   color: var(--theme-color);
 }
+
 .profile-container {
   display: flex;
   justify-content: right;
@@ -277,7 +269,7 @@ h2 {
 /*   RECENTLY PLAYED   */
 
 .homepage-covers {
-  margin-right: 10px;
+  margin-right: 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -335,14 +327,14 @@ h2 {
   list-style: none;
   padding: 0;
   overflow-x: auto;
-  padding: 20px 0;
+  padding: 25px 0;
 }
 
 .itemsC {
   position: relative;
-  margin-right: 10px;
-  width: 180px;
-  height: 300px;
+  margin-right: 15px;
+  width: 240px;
+  height: 480px;
   flex-shrink: 0;
   list-style: none;
   border-radius: 10px;
@@ -365,7 +357,7 @@ h2 {
 .itemsC .textDet {
   position: absolute;
   bottom: 0;
-  height: 50px;
+  height: 90px;
   width: 100%;
   display: flex;
 }
@@ -375,7 +367,6 @@ h2 {
 }
 
 .itemsC .contents p {
-  -webkit-line-clamp: 2;
   text-align: center;
   display: -webkit-box;
   overflow: hidden;
@@ -770,6 +761,7 @@ h2 {
   justify-content: center;
   /* margin: 0px 30px;
   padding: 20px 0px; */
+  flex-direction:row;
   border-top: 1px solid var(--border-color);
 }
 
@@ -782,7 +774,7 @@ h2 {
   border-radius: 20px;
   background-color: var(--content-bg);
   border: 1px solid var(--theme-bg-color);
-  display: flex;
+  flex-direction:row;
   align-items: flex-end;
   transition: transform 0.1s ease-in;
   position: relative;
@@ -805,6 +797,7 @@ h2 {
   position: absolute;
 }
 .artist-title {
+  flex-direction: row;
   flex-grow: 1;
 }
 .artist-title p,
@@ -882,7 +875,6 @@ h2 {
 .popular-text, .popular-artist {
   font-size: 14px;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* En fazla 3 satıra kadar keser */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1086,7 +1078,6 @@ h4 {
   padding: 0 8px;
   font-weight: normal;
   display: -webkit-box;
-  -webkit-line-clamp: 6; /* En fazla 3 satıra kadar keser */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1096,20 +1087,55 @@ h4 {
 .search-result {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.music-info {
-  margin-left: 10px;
+.search-result:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.music-info h3 {
+.search-result img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.search-result .music-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result .music-info h3 {
+  font-size: 14px;
   margin: 0;
+  color: var(--theme-color);
 }
 
-.music-info h4 {
-  margin: 0;
-  color: gray;
+.search-result .music-info h4 {
+  font-size: 12px;
+  color: var(--theme-color);
+  opacity: 0.7;
+  margin: 4px 0 0 0;
+}
+
+.no-results {
+  padding: 15px;
+  text-align: center;
+  color: var(--content-title-color);
+}
+
+/* Input focus durumunda stil */
+.search-bar input:focus {
+  outline: none;
+  border-radius: 12px;
+}
+
+/* Arama yapılırken input stilini koru */
+.search-bar.searching input {
+  border-radius: 12px;
 }
 
 .add-user {
@@ -1133,4 +1159,239 @@ h4 {
 #addUserButton i {
   font-size: 48px;
   color: var(--theme-color);
+}
+
+/* Search Results Styling */
+#searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  background-color: var(--theme-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  z-index: 9999;
+  backdrop-filter: blur(20px);
+  display: none;
+  margin-top: 5px;
+}
+
+.search-results-container {
+  padding: 8px 0;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-result:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-result img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.search-result .music-info {
+  margin-left: 12px;
+}
+
+.search-result .music-info h3 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--theme-color);
+}
+
+.search-result .music-info h4 {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: var(--content-title-color);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--content-title-color);
+  padding: 15px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-section {
+  padding: 10px 0;
+}
+
+.search-section-title {
+  padding: 0 15px;
+  font-size: 14px;
+  color: var(--theme-color);
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.artist-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.artist-result img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.artist-result .artist-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-result .artist-info h3 {
+  font-size: 14px;
+  margin: 0;
+  color: var(--theme-color);
+}
+
+.artist-result .artist-info span {
+  font-size: 12px;
+  color: var(--theme-color);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.song-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.song-result img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px; /* Köşeli resim */
+  object-fit: cover;
+}
+
+.song-result .music-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-result .music-info h3 {
+  font-size: 14px;
+  margin: 0;
+  color: var(--theme-color);
+}
+
+.song-result .music-info h4 {
+  font-size: 12px;
+  color: var(--theme-color);
+  opacity: 0.7;
+  margin: 4px 0 0 0;
+}
+
+/* Bölüm başlıkları için stiller */
+.search-section {
+  padding: 8px 0;
+}
+
+.search-section-title {
+  padding: 0 15px;
+  font-size: 13px;
+  color: var(--theme-color);
+  opacity: 0.7;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Sonuç bulunamadı mesajı için stil */
+.no-results {
+  padding: 15px;
+  text-align: center;
+  color: var(--theme-color);
+  opacity: 0.7;
+}
+
+/* Sanatçı sonuçları için özel stil */
+.search-section-title + div .search-result img {
+  border-radius: 50%; /* Sanatçı resimlerini yuvarlak yap */
+}
+
+/* Şarkı sonuçları için mevcut köşeli stil devam etsin */
+.search-section:nth-child(2) .search-result img {
+  border-radius: 4px;
+}
+
+/* User Profile sayfalarına özel stiller */
+.user-profile-page .artist-banner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  border-top: 1px solid var(--border-color);
+}
+
+.user-profile-page .artist-banner-container {
+  width: 100%;
+  height: 300px;
+  background-color: var(--content-bg);
+  border: 1px solid var(--theme-bg-color);
+  position: relative;
+  overflow: visible;
+}
+
+.user-profile-page .back-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-profile-page .artist-banner-title {
+  position: absolute;
+  bottom: -75px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-profile-page .artist-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.user-profile-page .artist-title h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.user-profile-page .artist-title p {
+  font-size: 14px;
+  color: var(--content-title-color);
+}
+
+.user-profile-page .artist-title img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--theme-bg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-profile-page .profile-info-container {
+  margin-top: 80px;
+  padding: 0 30px;
 }

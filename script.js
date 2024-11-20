@@ -2,39 +2,51 @@ var musicData = [
   {
     title: "Million Dolar Man",
     artist: "Lana Del Rey",
+    artistUrl: "artist/artist-lanadelrey.html",
+    artistImage: "assets/img/artist-profile-pictures/lana-del-rey.jpg",
     cover: "/born-to-die-cover.jpg",
     source: "/assets/musics/Diet-Mountain-Dew.mp3",
   },
   {
     title: "Atlantis",
     artist: "Güneş",
+    artistUrl: "artist/artist-gunes.html",
+    artistImage: "assets/img/artist-profile-pictures/gunes.jpg",
     cover: "/atlantis-cover.jpg",
     source: "/assets/musics/Gunes-Atlantis.mp3",
   },
   {
     title: "Positions",
     artist: "Ariana Grande",
+    artistUrl: "artist/artist-arianagrande.html",
+    artistImage: "assets/img/artist-profile-pictures/ariana-grande.png",
     cover: "/positions-cover.jpg",
     source: "/assets/musics/positions-ariana-grande.mp3",
   },
   {
     title: "Aşkın Olayım",
     artist: "Simge",
+    artistUrl: "artist/artist-simge.html",
+    artistImage: "assets/img/artist-profile-pictures/simge.jpeg",
     cover: "/ben-bazen-simge.jpeg",
     source: "/assets/musics/Askin-Olayim.mp3",
   },
   {
     title: "Eskisi Gibi",
     artist: "Lil Zey",
+    artistUrl: "artist/artist-lilzey.html",
+    artistImage: "assets/img/artist-profile-pictures/lil-zey.jpg",
     cover: "/eskisi-gibi.jpeg",
     source: "/assets/musics/Eskisi-Gibi.mp3",
   },
   {
     title: "Masal",
     artist: "Motive",
+    artistUrl: "artist/artist-motive.html",
+    artistImage: "assets/img/artist-profile-pictures/motive.jpg",
     cover: "/masal-motive-cover.jpeg",
     source: "/assets/musics/Motive-Masal.mp3",
-  },
+  }
 ];
 
 var audio = new Audio();
@@ -294,56 +306,136 @@ undoButton.addEventListener("click", function () {
   }
 });
 
-// Get the search input element
-var searchInput = document.getElementById("searchInput");
-// Get the search results element
-var searchResults = document.getElementById("searchResults");
+// Search functionality
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
 
-// Function to perform the search
 function searchMusic() {
-  // Clear previous search results
-  searchResults.innerHTML = "";
-
-  // Get the search query
-  var query = searchInput.value.toLowerCase().trim();
-
-  // Check if the search query is empty
-  if (query === "") {
-    return; // Exit the function if the query is empty
+  const query = searchInput.value.toLowerCase().trim();
+  
+  const searchBar = document.querySelector('.search-bar');
+  if (query !== '') {
+    searchBar.classList.add('searching');
+  } else {
+    searchBar.classList.remove('searching');
+    searchResults.style.display = 'none';
+    return;
   }
 
-  // Filter the musicData array based on the search query
-  var filteredMusic = musicData.filter(function (music) {
-    var title = music.title.toLowerCase();
-    var artist = music.artist.toLowerCase();
-    return title.includes(query) || artist.includes(query);
-  });
+  // Benzersiz sanatçıları ve URL'lerini bul
+  const uniqueArtists = [...new Set(musicData.map(music => ({
+    name: music.artist,
+    url: music.artistUrl
+  })))];
+  
+  // Şarkıları ve sanatçıları filtrele
+  const filteredMusic = musicData.filter(music => 
+    music.title.toLowerCase().includes(query) || 
+    music.artist.toLowerCase().includes(query)
+  );
 
-  // Display the search results
-  filteredMusic.forEach(function (music) {
-    var resultItem = document.createElement("div");
-    resultItem.classList.add("search-result");
+  const filteredArtists = uniqueArtists.filter(artist => 
+    artist.name.toLowerCase().includes(query)
+  );
 
-    var coverImage = document.createElement("img");
-    coverImage.src = music.cover;
-    coverImage.alt = music.title;
-    resultItem.appendChild(coverImage);
+  searchResults.style.display = 'block';
+  searchResults.innerHTML = '';
+  
+  // Önce sanatçıları göster
+  if (filteredArtists.length > 0) {
+    const artistsSection = document.createElement('div');
+    artistsSection.classList.add('search-section');
+    artistsSection.innerHTML = '<h3 class="search-section-title">Sanatçılar</h3>';
+    
+    filteredArtists.forEach(artist => {
+      const resultItem = document.createElement('div');
+      resultItem.classList.add('search-result', 'artist-result');
+      
+      const artistData = musicData.find(music => music.artist === artist.name);
+      const artistImage = artistData ? artistData.artistImage : 'assets/img/artist-profile-pictures/default-artist.jpg';
+      
+      resultItem.innerHTML = `
+        <img src="${artistImage}" alt="${artist.name}">
+        <div class="music-info">
+          <h3>${artist.name}</h3>
+          <h4>Sanatçı</h4>
+        </div>
+      `;
+      
+      resultItem.addEventListener('click', () => {
+        window.location.href = artist.url;
+      });
+      
+      artistsSection.appendChild(resultItem);
+    });
+    
+    searchResults.appendChild(artistsSection);
+  }
 
-    var musicInfo = document.createElement("div");
-    musicInfo.classList.add("music-info");
+  // Sonra şarkıları göster
+  if (filteredMusic.length > 0) {
+    const songsSection = document.createElement('div');
+    songsSection.classList.add('search-section');
+    songsSection.innerHTML = '<h3 class="search-section-title">Şarkılar</h3>';
+    
+    filteredMusic.forEach((music, index) => {
+      const resultItem = document.createElement('div');
+      resultItem.classList.add('search-result', 'song-result');
+      
+      resultItem.innerHTML = `
+        <img src="/assets/img/album_covers${music.cover}" alt="${music.title}">
+        <div class="music-info">
+          <h3>${music.title}</h3>
+          <h4>${music.artist}</h4>
+        </div>
+      `;
+      
+      resultItem.addEventListener('click', () => {
+        playMusic(
+          music.source,
+          `playPauseIcon${musicData.indexOf(music)}`,
+          music.title,
+          music.artist,
+          music.cover,
+          musicData.indexOf(music)
+        );
+        searchResults.style.display = 'none';
+        searchInput.value = '';
+        searchBar.classList.remove('searching');
+      });
+      
+      songsSection.appendChild(resultItem);
+    });
+    
+    searchResults.appendChild(songsSection);
+  }
 
-    var title = document.createElement("h3");
-    title.textContent = music.title;
-    musicInfo.appendChild(title);
-
-    var artist = document.createElement("h4");
-    artist.textContent = music.artist;
-    musicInfo.appendChild(artist);
-
-    resultItem.appendChild(musicInfo);
-    searchResults.appendChild(resultItem);
-  });
+  // Sonuç bulunamadıysa
+  if (filteredMusic.length === 0 && filteredArtists.length === 0) {
+    searchResults.innerHTML = '<div class="no-results">Sonuç bulunamadı</div>';
+  }
 }
 
-// Add event listener for the search input
-searchInput.addEventListener("input", searchMusic);
+// Her karakter girildiğinde arama yap
+searchInput.addEventListener('input', searchMusic);
+
+// Input'a focus olduğunda ve içinde yazı varsa sonuçları göster
+searchInput.addEventListener('focus', () => {
+  if (searchInput.value.trim() !== '') {
+    searchMusic();
+  }
+});
+
+// Sayfa herhangi bir yerine tıklandığında sonuçları gizle
+document.addEventListener('click', (e) => {
+  if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+    searchResults.style.display = 'none';
+    document.querySelector('.search-bar').classList.remove('searching');
+  }
+});
+
+// Sonuçlar içinde tıklama olayının dışarı yayılmasını engelle
+searchResults.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+

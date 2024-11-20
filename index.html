@@ -48,8 +48,8 @@
         <div class="header">
           <div class="search-bar">
             <input type="text" placeholder="Search" id="searchInput" />
+            <div id="searchResults" class="search-results-dropdown"></div>
           </div>
-          <div id="searchResults"></div>
           <div class="profile-container">
             <button class="header-buttons">
               <img src="assets/img/profiles/umut.png" />
@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="last-played">
-          <h2 class="explore-title">Yakınlarda Çalınanlar</h2>
+          <h2 class="explore-title">Recently Played</h2>
           <div id="recentlyContainer" class="carousel"></div>
         </div>
         <div class="explore">
@@ -85,7 +85,7 @@
             <div class="itemsC">
               <div class="contents">
                 <h1 class="leftTxtDet">Dance Now!</h1>
-                <div class="textDet" style="background-color: #51507c">
+                <div class="textDet" style="background-color: #323168">
                   <p>
                     Charlotte de Witte, Jai Wolf, Kelly Clarkson, DNCE, P!nk, Jason
                     Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish, Ritt
@@ -101,7 +101,7 @@
             <div class="itemsC">
               <div class="contents">
                 <h1 class="leftTxtDet">Levitating!</h1>
-                <div class="textDet" style="background-color: #51507c">
+                <div class="textDet" style="background-color: #a92525">
                   <p>
                     Dua Lipa, Jai Wolf, Kelly Clarkson, DNCE, P!nk, Jason
                     Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish, Ritt
@@ -148,7 +148,7 @@
             <div class="itemsC">
               <div class="contents">
                 <h1 class="leftTxtDet">Soft</h1>
-                <div class="textDet" style="background-color: #013e6a">
+                <div class="textDet" style="background-color: #6692b2">
                   <p>
                     Olivia Rodrigo, Jai Wolf, Kelly Clarkson, DNCE, P!nk,
                     Jason Derulo, Ed Sheeran, WALK THE MOON, Billie Eilish,
@@ -164,7 +164,7 @@
             <div class="itemsC">
               <div class="contents">
                 <h1 class="leftTxtDet">Motive</h1>
-                <div class="textDet" style="background-color: #013e6a">
+                <div class="textDet" style="background-color: #e94e70">
                   <p>
                     Ariana Grande, Doja Cat, Miley Cyrus, Sabrina Carpenter, Madison Beer,
                     Drake, Melanie Martinez, Shakira, Britney Spears,
@@ -173,7 +173,7 @@
                 </div>
               </div>
               <div class="bgImg">
-                <img src="https://www.hqdiesel.net/gallery/albums/userpics/1052218/normal_ARIPOSITION-HQD009.jpg" alt="image"
+                <img src="https://papers.co/wallpaper/papers.co-hj35-ariana-grande-pink-pose-music-girl-33-iphone6-wallpaper.jpg" alt="image"
                   srcset="" />
               </div>
             </div>
@@ -264,11 +264,43 @@
             <div class="friends-name">Umut Yavuz</div>
             <div class="friends-song">
               <a href="">Flowers </a>
-              <a href="miley-cyrus.html">• Miley Cyrus</a>
+              <a href="">• Miley Cyrus</a>
             </div>
             <div class="friends-album">
               <i class="fa-solid fa-record-vinyl"></i>
               <a href="">Endless Summer Vaccation</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="assets/img/profiles/efe.png" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Efe Türkoğu</div>
+            <div class="friends-song">
+              <a href="">Karma </a>
+              <a href="miley-cyrus.html">• Şehinşah</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href=""> Karma</a>
+            </div>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <div class="friends-picture">
+            <img src="assets/img/profiles/beyza.png" alt="" />
+          </div>
+          <div>
+            <div class="friends-name">Beyza Acar</div>
+            <div class="friends-song">
+              <a href="">Bi Bak Bana </a>
+              <a href="miley-cyrus.html">• Skopava</a>
+            </div>
+            <div class="friends-album">
+              <i class="fa-solid fa-record-vinyl"></i>
+              <a href="">Ben Senden Vazgeçtim</a>
             </div>
           </div>
         </div>
@@ -375,6 +407,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="songs.js"></script>
   <script src="/js/friend-activity.js"></script>
   <script src="/js/light-mode.js"></script>
   <script src="/js/volume-slider.js"></script>

@@ -364,7 +364,6 @@ h2 {
 }
 
 .itemsC .contents p {
-  -webkit-line-clamp: 2;
   text-align: center;
   display: -webkit-box;
   overflow: hidden;
@@ -468,7 +467,6 @@ h2 {
 .now-playing-artist {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
   overflow: hidden;
 }
 .now-playing-title:hover,
@@ -710,7 +708,7 @@ h2 {
 }
 .artist-button {
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
 }
 

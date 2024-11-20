@@ -1,4 +1,4 @@
-//KOYU MOD AÇIK MOD
+
 const themeToggle = document.getElementById("theme-toggle");
 const contentDiv = document.getElementById("content");
 
